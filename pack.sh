@@ -61,7 +61,7 @@ cd ../
 
 # Make boot img
 echo " Making Single Recovery kernel \n "
-mkbootimg --base 0x80200000 --kernel kernel/arch/arm/boot/zImage --ramdisk_offset 0x02000000 --cmdline "console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3" --ramdisk ramdisk.img --pagesize 4096 -o boot.img
+mkbootimg --base 0x80208000 --kernel kernel/arch/arm/boot/zImage --ramdisk_offset 0x02000000 --cmdline "console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3" --ramdisk ramdisk.img --pagesize 4096 -o boot.img
 
 #Zip boot.img
 mv boot.img meta/
